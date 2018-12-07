@@ -3,7 +3,7 @@ timemeasureC(){
     for I in `seq 1 $1`
     do
         echo $I >> $3
-        /root/chameleon/build/timing/time_dgemm_tile_batch --n=$(($4*$5)) --m=$(($4*$5)) --nb=$NB --gpus=0 --nowarmup >> $3
+        /root/chameleon/build/timing/time_dgemm_tile_batch --n=$(($4*$5)) --m=$(($4*$5)) --nb=$4 --gpus=0 --nowarmup --profile >> $3
         date +%s >> $2
     done
 }
