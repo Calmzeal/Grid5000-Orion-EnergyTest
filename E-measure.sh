@@ -9,4 +9,5 @@ timemeasureC(){
 }
 
 export STARPU_SCHED=ws
-timemeasureC 5 CN1600S20.txt 20 1600
+timemeasureC 5 CN1600S20.txt logCN1600S20.txt 20 1600
+
