@@ -8,10 +8,7 @@ timemeasureC(){
         echo $(($FINISH-$DURING)) >> $2
         echo $FINISH >> $2
     done
-    
-    
 }
-
 export STARPU_SCHED=ws
 timemeasureC 5 CN1600S20.txt 20 1600
 
