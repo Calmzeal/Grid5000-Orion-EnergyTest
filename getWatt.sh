@@ -4,8 +4,8 @@ measure (){
 teststarPU (){
     while read line
     do
-        s=$(echo $line | awk {print $1})
-        f=$(echo $line | awk {print $2})
+        s=$(echo $line | awk '{print $1}')
+        f=$(echo $line | awk '{print $2}')
         measure $s $f $2
     done<$1
 }
