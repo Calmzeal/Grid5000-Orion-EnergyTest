@@ -9,5 +9,4 @@ teststarPU (){
         measure $s $f $2
     done<$1
 }
-teststarPU CN1600S20.txt logCN1600S20.json
 
