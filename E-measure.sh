@@ -11,5 +11,10 @@ timemeasureC(){
     scp $2 ezhu@lyon:~/
 }
 export STARPU_SCHED=ws
+timemeasureC 5 CN6400S5.txt 5 6400
+timemeasureC 5 CN3200S10.txt 10 3200
 timemeasureC 5 CN1600S20.txt 20 1600
+timemeasureC 5 CN800S40.txt 40 800
+timemeasureC 5 CN400S80.txt 80 400
+timemeasureC 5 CN200S160.txt 160 200
 scp getWatt.sh ezhu@lyon:~/
