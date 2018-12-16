@@ -8,7 +8,7 @@ timemeasureC(){
         echo $(($FINISH-$DURING)) " " $FINISH >> $2
     done
     echo "teststarPU $2 log$2" >> getWatt.sh
-    scp $2 ezhu@lyon:~/
+    
 }
 export STARPU_SCHED=ws
 timemeasureC 5 CN200S160.txt 160 200
@@ -17,3 +17,4 @@ timemeasureC 5 CN800S40.txt 40 800
 timemeasureC 5 CN1600S20.txt 20 1600
 timemeasureC 5 CN3200S10.txt 10 3200
 scp getWatt.sh ezhu@lyon:~/
+scp ./*.txt ezhu@lyon:~/
