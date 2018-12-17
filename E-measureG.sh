@@ -4,7 +4,7 @@ timemeasureG(){
     do
         #echo $I >> $3
         /root/chameleon/build/timing/time_dgemm_tile_batch --n=$(($3*$4)) --m=$(($3*$4)) --nb=$4 --gpus=1 --nowarmup --profile 2> temp
-        DURING=$(cat temp|grep "CPU 0.*total"|awk {'print $4'})  
+        DURING=$(cat temp|grep "CPU 0.*total"|awk {'print int($4)'})  
         FINISH=$(date +%s)
         echo $(($FINISH-$DURING)) " " $FINISH >> $2
     done
@@ -15,7 +15,7 @@ timemeasureG1(){
     for I in `seq 1 $1`
     do
         /root/chameleon/build/timing/time_dpotrf_tile_batch --n=$(($3*$4)) --m=$(($3*$4)) --nb=$4 --gpus=1 --nowarmup --profile 2> temp
-        DURING=$(cat temp|grep "CPU 0.*total"|awk {'print $4'})  
+        DURING=$(cat temp|grep "CPU 0.*total"|awk {'print int($4)'})  
         FINISH=$(date +%s)
         echo $(($FINISH-$DURING)) " " $FINISH >> $2
     done
@@ -26,7 +26,7 @@ timemeasureG2(){
     for I in `seq 1 $1`
     do
         /root/chameleon/build/timing/time_dtrsm_tile_batch --n=$(($3*$4)) --m=$(($3*$4)) --nb=$4 --gpus=1 --nowarmup --profile 2> temp
-        DURING=$(cat temp|grep "CPU 0.*total"|awk {'print $4'})  
+        DURING=$(cat temp|grep "CPU 0.*total"|awk {'print int($4)'})  
         FINISH=$(date +%s)
         echo $(($FINISH-$DURING)) " " $FINISH >> $2
     done
@@ -39,7 +39,7 @@ timemeasureG3(){
     for I in `seq 1 $1`
     do
         /root/chameleon/build/timing/time_dsyrk_tile_batch --n=$(($3*$4)) --m=$(($3*$4)) --nb=$4 --gpus=1 --nowarmup --profile 2> temp
-        DURING=$(cat temp|grep "CPU 0.*total"|awk {'print $4'})  
+        DURING=$(cat temp|grep "CPU 0.*total"|awk {'print int($4)'})  
         FINISH=$(date +%s)
         echo $(($FINISH-$DURING)) " " $FINISH >> $2
     done
