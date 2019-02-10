@@ -50,8 +50,18 @@ timemeasureG3(){
 }
 
 export STARPU_SCHED=ws
-timemeasureG 3 GN4800S2.txt 4800 2
-timemeasureG 3 GN6400S2.txt 6400 2
+timemeasureG 3 GN9600S1.txt 1 9600
+timemeasureG 3 GN12800S1.txt 1 12800
+timemeasureG 3 GN12800S2.txt 2 12800
+
+timemeasureG2 3 G2N9600S1.txt 1 9600
+timemeasureG2 3 G2N12800S1.txt 1 12800
+timemeasureG2 3 G2N12800S2.txt 2 12800
+
+timemeasureG3 3 G3N9600S1.txt 1 9600
+timemeasureG3 3 G3N12800S1.txt 1 12800
+timemeasureG3 3 G3N12800S2.txt 2 12800
+
 
 # timemeasureG 5 GN200S160.txt 160 200
 # timemeasureG 5 GN400S80.txt 80 400
