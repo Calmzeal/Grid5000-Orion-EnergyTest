@@ -54,7 +54,7 @@ timemeasureC 3 CN9600S1.txt 1 9600
 timemeasureC 3 CN6400S2.txt 2 6400
 
 timemeasureC1 3 C1N9600S1.txt 1 9600
-timemeasureC1 3 C2N6400S2.txt 2 6400
+timemeasureC1 3 C1N6400S2.txt 2 6400
 
 timemeasureC2 3 C2N9600S1.txt 1 9600
 timemeasureC2 3 C2N6400S2.txt 2 6400
