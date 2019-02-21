@@ -110,7 +110,7 @@ cp -f CPUversion/time_zgemm_tile_batch.c /root/chameleon/timing
 
 cd /root/chameleon/build/timing
 make
-cd /root/HPC_research
+cd /root/HPC-research
 
 tm-dgemm-CPU 3 6 9600 9600
 tm-dgemm-CPU 3 6 12800 6400
@@ -129,7 +129,7 @@ cp -f CPUversion/time_zgemm_tile_batch.c /root/chameleon/timing
 
 cd /root/chameleon/build/timing
 make
-cd /root/HPC_research
+cd /root/HPC-research
 
 tm-dgemm-GPU 3 1 9600 9600
 tm-dgemm-GPU 3 1 12800 6400
