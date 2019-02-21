@@ -124,8 +124,8 @@ tm-dtrsm-CPU 3 6 12800 6400
 tm-dsyrk-CPU 3 6 9600 9600
 tm-dsyrk-CPU 3 6 12800 6400
 
-cp -f CPUversion/time_zpotrf_tile.c /root/chameleon/timing
-cp -f CPUversion/time_zgemm_tile_batch.c /root/chameleon/timing
+cp -f GPUversion/time_zpotrf_tile.c /root/chameleon/timing
+cp -f GPUversion/time_zgemm_tile_batch.c /root/chameleon/timing
 
 cd /root/chameleon/build/timing
 make
