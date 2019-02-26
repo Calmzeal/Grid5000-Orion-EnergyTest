@@ -47,9 +47,9 @@ RunTest( int *iparam, double *dparam, chameleon_time_t *t_ )
         CHAMELEON_zplghe_Tile( (double)N, uplo, descA, 51 );
     }
     //RUNTIME_zlocality_allrestrict( STARPU_CUDA );
-    RUNTIME_zlocality_onerestrict( TASK_POTRF, STARPU_CPU ); 
+    RUNTIME_zlocality_onerestrict( TASK_GEMM, STARPU_CUDA ); 
     RUNTIME_zlocality_onerestrict( TASK_SYRK, STARPU_CUDA );
-    RUNTIME_zlocality_onerestrict( TASK_TRSM, STARPU_CUDA );
+    RUNTIME_zlocality_onerestrict( TASK_TRSM, STARPU_CPU );
     
     /* CHAMELEON ZPOTRF */
     START_TIMING();
